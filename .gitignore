@@ -1,0 +1,76 @@
+# ─── Node / Frontend ────────────────────────────────────────
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Vite cache
+.vite/
+
+# ─── Environment Variables (NEVER commit these) ─────────────
+.env
+.env.local
+.env.*.local
+.env.production
+
+# ─── Java / Spring Boot / Maven ─────────────────────────────
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+HELP.md
+
+# ─── IDE — IntelliJ IDEA ────────────────────────────────────
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# ─── IDE — Eclipse / STS ────────────────────────────────────
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+.pom.xml
+
+# ─── IDE — NetBeans ─────────────────────────────────────────
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ─── IDE — VS Code ──────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+
+# ─── OS Files ───────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
