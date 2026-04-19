@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 
-/** Full-page loading spinner */
 export function Spinner({ message = 'Loading...' }) {
   return (
     <div className="flex flex-col items-center justify-center py-24 gap-4">
@@ -12,7 +11,7 @@ export function Spinner({ message = 'Loading...' }) {
   )
 }
 
-/** Inline error alert */
+
 export function ErrorAlert({ message, onDismiss }) {
   if (!message) return null
   return (
@@ -27,7 +26,7 @@ export function ErrorAlert({ message, onDismiss }) {
   )
 }
 
-/** Success alert */
+
 export function SuccessAlert({ message }) {
   if (!message) return null
   return (
@@ -39,21 +38,18 @@ export function SuccessAlert({ message }) {
   )
 }
 
-/** Redirects unauthenticated users to /login */
 export function ProtectedRoute({ children }) {
   const { isLoggedIn } = useAuth()
   if (!isLoggedIn) return <Navigate to="/login" replace />
   return children
 }
 
-/** Format Indian Rupee price */
 export function formatPrice(amount) {
   return new Intl.NumberFormat('en-IN', {
     style: 'currency', currency: 'INR', maximumFractionDigits: 0
   }).format(amount)
 }
 
-/** Calculate rental days between two date strings */
 export function calcDays(start, end) {
   if (!start || !end) return 0
   const diff = new Date(end) - new Date(start)

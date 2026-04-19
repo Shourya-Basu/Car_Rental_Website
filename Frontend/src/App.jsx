@@ -22,8 +22,6 @@ export default function App() {
             <Route path="/login"     element={<LoginPage />} />
             <Route path="/register"  element={<RegisterPage />} />
             <Route path="/cars"      element={<CarsPage />} />
-
-            {/* Protected routes — require login */}
             <Route
               path="/cars/:id/book"
               element={
@@ -40,15 +38,12 @@ export default function App() {
                 </ProtectedRoute>
               }
             />
-
-            {/* Fallback */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
 
-        {/* Footer */}
         <footer className="border-t border-dark-700 py-6 text-center text-white/25 text-xs">
-          © {new Date().getFullYear()} DriveEasy · Spring Boot + React + MySQL
+         By Shourya Basu (2330400)
         </footer>
       </div>
     </AuthProvider>

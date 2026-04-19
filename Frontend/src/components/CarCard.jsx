@@ -37,7 +37,7 @@ export default function CarCard({ car }) {
         {/* Price */}
         <div className="mt-auto pt-4 border-t border-dark-600 flex items-center justify-between">
           <div>
-            <span className="text-brand-500 font-display font-bold text-xl">
+            <span className=" bg-blue-500 font-display font-bold text-xl">
               {formatPrice(car.pricePerDay)}
             </span>
             <span className="text-white/40 text-xs"> / day</span>

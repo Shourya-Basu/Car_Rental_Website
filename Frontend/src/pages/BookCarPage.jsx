@@ -18,7 +18,6 @@ export default function BookCarPage() {
   const [bookError, setBookError] = useState('')
   const [success, setSuccess]     = useState(false)
 
-  // Fetch car details on mount
   useEffect(() => {
     carsAPI.getById(id)
       .then(setCar)
@@ -43,7 +42,6 @@ export default function BookCarPage() {
         endDate,
       })
       setSuccess(true)
-      // Redirect to bookings after 1.8s
       setTimeout(() => navigate('/bookings'), 1800)
     } catch (err) {
       setBookError(err.message)
@@ -77,7 +75,6 @@ export default function BookCarPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        {/* ── Left: Car Details ───────────────────── */}
         <div className="card overflow-hidden animate-slide-up">
           <img
             src={car.imageUrl || fallbackImg}
@@ -92,7 +89,6 @@ export default function BookCarPage() {
             <h2 className="font-display font-bold text-2xl mb-1">{car.name}</h2>
             <p className="text-white/50 text-sm mb-5">{car.model}</p>
 
-            {/* Stats */}
             <div className="grid grid-cols-2 gap-3">
               {[
                 { label: 'Daily Rate',    value: formatPrice(car.pricePerDay) },
@@ -105,7 +101,7 @@ export default function BookCarPage() {
               ))}
             </div>
 
-            {/* Price Summary (shows when dates selected) */}
+
             {endDate && endDate > startDate && (
               <div className="mt-4 bg-brand-500/10 border border-brand-500/20
                               rounded-xl p-4 animate-slide-up">
@@ -123,7 +119,6 @@ export default function BookCarPage() {
           </div>
         </div>
 
-        {/* ── Right: Booking Form ─────────────────── */}
         <div className="card p-6 animate-slide-up" style={{ animationDelay: '80ms' }}>
           <h3 className="font-display font-bold text-lg mb-6">Rental Details</h3>
 

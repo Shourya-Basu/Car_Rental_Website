@@ -17,7 +17,7 @@ export default function Navbar() {
       <Link
         to={to}
         className={`text-sm font-medium transition-colors duration-150 ${
-          active ? 'text-brand-500' : 'text-white/60 hover:text-white'
+          active ? 'text-blue-500' : 'text-white/60 hover:text-white'
         }`}
       >
         {label}
@@ -29,21 +29,19 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-dark-900/95 backdrop-blur border-b border-dark-700">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
 
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white font-display font-bold text-sm">
-            D
+          <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center text-white font-display font-bold text-sm">
+            
           </div>
-          <span className="font-display font-bold text-lg tracking-tight">DriveEasy</span>
+          <span className="font-display font-bold text-lg tracking-tight">CarRental</span>
         </Link>
 
-        {/* Nav Links */}
+        
         <div className="flex items-center gap-6">
           {navLink('/cars', 'Browse Cars')}
           {isLoggedIn && navLink('/bookings', 'My Bookings')}
         </div>
 
-        {/* Auth Section */}
         <div className="flex items-center gap-3">
           {isLoggedIn ? (
             <>

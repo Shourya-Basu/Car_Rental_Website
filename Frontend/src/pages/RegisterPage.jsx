@@ -38,13 +38,13 @@ export default function RegisterPage() {
     <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-sm animate-fade-in">
 
-        {/* Header */}
+       
         <div className="text-center mb-8">
           <h1 className="font-display font-bold text-3xl mb-2">Create account</h1>
           <p className="text-white/50 text-sm">Start renting cars in minutes</p>
         </div>
 
-        {/* Card */}
+        
         <div className="card p-7">
           <form onSubmit={handleSubmit} className="space-y-5">
             <ErrorAlert message={error} onDismiss={() => setError('')} />
@@ -104,7 +104,7 @@ export default function RegisterPage() {
           </form>
         </div>
 
-        {/* Footer */}
+        
         <p className="text-center text-white/40 text-sm mt-6">
           Already have an account?{' '}
           <Link to="/login" className="text-brand-500 hover:text-brand-600 font-medium">

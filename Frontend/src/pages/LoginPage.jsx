@@ -36,13 +36,13 @@ export default function LoginPage() {
     <div className="min-h-[calc(100vh-4rem)] flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-sm animate-fade-in">
 
-        {/* Header */}
+        
         <div className="text-center mb-8">
           <h1 className="font-display font-bold text-3xl mb-2">Welcome back</h1>
-          <p className="text-white/50 text-sm">Sign in to your DriveEasy account</p>
+          <p className="text-white/50 text-sm">Sign in to your carRental account</p>
         </div>
 
-        {/* Card */}
+        
         <div className="card p-7">
           <form onSubmit={handleSubmit} className="space-y-5">
             <ErrorAlert message={error} onDismiss={() => setError('')} />
@@ -88,7 +88,7 @@ export default function LoginPage() {
           </form>
         </div>
 
-        {/* Footer */}
+        
         <p className="text-center text-white/40 text-sm mt-6">
           Don't have an account?{' '}
           <Link to="/register" className="text-brand-500 hover:text-brand-600 font-medium">
